@@ -1,8 +1,8 @@
-// Schema do banco de dados - SQLite + Prisma
-// Rode "npx prisma migrate dev --name init" depois de configurar o .env
+// Schema do banco de dados - PostgreSQL + Prisma
+// As migrations de produção são aplicadas com "npx prisma migrate deploy"
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
