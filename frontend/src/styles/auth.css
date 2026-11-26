@@ -1,0 +1,75 @@
+/* Estilos específicos das telas de Cadastro e Login */
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  max-width: 920px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.auth-visual {
+  background: linear-gradient(160deg, rgba(168, 85, 247, 0.35), rgba(236, 72, 153, 0.25));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.auth-visual-text { font-style: italic; opacity: 0.9; }
+
+.auth-form {
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-form h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  background: linear-gradient(90deg, var(--color-pink), var(--color-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle { opacity: 0.75; margin: 0 0 8px; font-size: 0.95rem; }
+
+.password-field { position: relative; display: flex; }
+.password-field input { flex: 1; padding-right: 40px; }
+.toggle-password {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-white);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.auth-switch { text-align: center; font-size: 0.85rem; opacity: 0.8; }
+.auth-switch a { color: var(--color-cyan); text-decoration: none; }
+.auth-switch a:hover { text-decoration: underline; }
+
+@media (max-width: 860px) {
+  .auth-card { grid-template-columns: 1fr; }
+  .auth-visual { padding: 24px; }
+}
